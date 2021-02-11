@@ -1,11 +1,11 @@
 <?php
 class VODService {
     private string $name;
-    private $price;
+    private int $price;
 
-    public function __construct(){
-        $this->getName();
-        $this->getPrice();
+    public function __construct($name, $price){
+        $this->name = $name;
+        $this->price = $price;
     }
 
     // NAME
@@ -14,9 +14,10 @@ class VODService {
         return $this->name;
     }
 
-    public function setName(string $name): void
+    public function setName(string $name): VODService
     {
         $this->name = $name;
+        return $this;
     }
 
     // PRICE
@@ -25,9 +26,10 @@ class VODService {
         return $this->price;
     }
 
-    public function setPrice($price): void
+    public function setPrice($price): VODService
     {
         $this->price = $price;
+        return $this;
     }
 
 }

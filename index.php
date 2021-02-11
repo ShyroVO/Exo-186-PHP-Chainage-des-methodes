@@ -16,4 +16,8 @@
  */
 require 'VODService.php';
 
-$film1 = new VODService();
+$film1 = new VODService('Dino World',12);
+echo $film1->getName() . " : " . $film1->getPrice() . "<br><br>";
+
+$film1->setName('Dino Day')->setPrice(13);
+echo $film1->getName() . " : " . $film1->getPrice() . "<br><br>";
